@@ -9,7 +9,10 @@ if(operation == 1):
     resp = requests.get("https://codeforces.com/api/user.rating?handle={}".format(handle))
     dat = resp.text
     dic = json.loads(dat)
-    print("Your current rating is {}".format(dic['result'][-1]['newRating']))
+    try:
+        print("Your current rating is {}".format(dic['result'][-1]['newRating']))
+    excpet:
+        print("Error!!!")
 
 elif(operation == 2):
     handle = input("Enter codeforces handle : ")
