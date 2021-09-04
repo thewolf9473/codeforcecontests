@@ -11,7 +11,7 @@ if(operation == 1):
     dic = json.loads(dat)
     try:
         print("Your current rating is {}".format(dic['result'][-1]['newRating']))
-    excpet:
+    except:
         print("Error!!!")
 
 elif(operation == 2):
